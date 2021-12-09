@@ -17,11 +17,14 @@ class _homepageState extends State<homepage> {
         centerTitle: true,
         title: const Text("Home"),
       ),
-      body: Center(
-        child: Column(
-          children: const [
-            Text("Hello there, what ya doin"),
-          ],
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Center(
+          child: Column(
+            children: const [
+              Text("basically this is homepage"),
+            ],
+          ),
         ),
       ),
     );

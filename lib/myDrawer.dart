@@ -16,7 +16,7 @@ class _myDrawerState extends State<myDrawer> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.40,
+      width: MediaQuery.of(context).size.width * 0.45,
       child: Drawer(
         backgroundColor: Colors.teal,
         child: Padding(

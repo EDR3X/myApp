@@ -92,10 +92,6 @@ class _loginState extends State<login> {
                 child: Column(
                   children: [
                     Image.asset("assets/icon.png"),
-                    // Icon(
-                    //   Icons.supervised_user_circle,
-                    //   size: 180,
-                    // ),
                     SizedBox(
                       height: 20,
                     ),

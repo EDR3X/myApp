@@ -15,12 +15,12 @@ class _HomePageState extends State<HomePage> {
     width: 90,
     height: 90,
     child: DecoratedBox(
-      child: Icon(
+      child: const Icon(
         Icons.cancel,
         size: 90,
       ),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 255, 255, 255),
+        color: const Color.fromARGB(255, 255, 255, 255),
         border: Border.all(
           color: Colors.black,
         ),
@@ -31,12 +31,12 @@ class _HomePageState extends State<HomePage> {
     width: 90,
     height: 90,
     child: DecoratedBox(
-      child: Icon(
+      child: const Icon(
         Icons.circle_rounded,
         size: 90,
       ),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 255, 255, 255),
+        color: const Color.fromARGB(255, 255, 255, 255),
         border: Border.all(
           color: Colors.black,
         ),
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
     height: 90,
     child: DecoratedBox(
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 255, 255, 255),
+        color: const Color.fromARGB(255, 255, 255, 255),
         border: Border.all(
           color: Colors.black,
         ),
@@ -170,22 +170,22 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: myDrawer(),
+      drawer: const myDrawer(),
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Tic Tac Toe"),
+        title: const Text("Tic Tac Toe"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Expanded(
             child: GridView.builder(
-                padding: EdgeInsets.all(10),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                padding: const EdgeInsets.all(10),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                   childAspectRatio: 1.0,
                   crossAxisSpacing: 5,
@@ -203,22 +203,22 @@ class _HomePageState extends State<HomePage> {
                       ),
                     )),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Text(
             message,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
           ),
           Container(
             child: MaterialButton(
-              color: Color.fromARGB(255, 17, 88, 146),
+              color: const Color.fromARGB(255, 17, 88, 146),
               minWidth: 150,
               height: 50,
               onPressed: () {
                 resetGame();
               },
-              child: Text(
+              child: const Text(
                 "Reset",
                 style: TextStyle(
                     color: Colors.white,
@@ -227,7 +227,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 120,
           )
         ],

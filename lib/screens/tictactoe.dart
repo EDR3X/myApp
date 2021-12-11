@@ -16,39 +16,46 @@ class _HomePageState extends State<HomePage> {
     height: 90,
     child: DecoratedBox(
       child: const Icon(
-        Icons.cancel,
+        Icons.cancel_outlined,
+        color: Colors.white,
         size: 90,
       ),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 255, 255, 255),
+        color: Color.fromARGB(255, 238, 26, 26),
+        borderRadius: BorderRadius.circular(15),
         border: Border.all(
           color: Colors.black,
         ),
       ),
     ),
   );
+
   var circle = SizedBox(
     width: 90,
     height: 90,
     child: DecoratedBox(
       child: const Icon(
-        Icons.circle_rounded,
+        Icons.circle_outlined,
+        color: Colors.white,
         size: 90,
       ),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 255, 255, 255),
+        color: Color.fromARGB(255, 30, 33, 235),
+        borderRadius: BorderRadius.circular(15),
         border: Border.all(
           color: Colors.black,
         ),
       ),
     ),
   );
+
   var edit = SizedBox(
     width: 90,
     height: 90,
     child: DecoratedBox(
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 255, 255, 255),
+        borderRadius: BorderRadius.circular(15),
         border: Border.all(
           color: Colors.black,
         ),
@@ -184,12 +191,12 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             child: GridView.builder(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(8),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                   childAspectRatio: 1.0,
-                  crossAxisSpacing: 5,
-                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 1,
+                  mainAxisSpacing: 1,
                 ),
                 itemCount: gameState.length,
                 itemBuilder: (context, i) => SizedBox(
@@ -204,27 +211,27 @@ class _HomePageState extends State<HomePage> {
                     )),
           ),
           const SizedBox(
-            height: 50,
+            height: 40,
           ),
           Text(
             message,
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
           ),
-          Container(
-            child: MaterialButton(
-              color: const Color.fromARGB(255, 17, 88, 146),
-              minWidth: 150,
-              height: 50,
-              onPressed: () {
-                resetGame();
-              },
-              child: const Text(
-                "Reset",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold),
-              ),
+          MaterialButton(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            color: const Color.fromARGB(255, 17, 88, 146),
+            minWidth: 150,
+            height: 60,
+            onPressed: () {
+              resetGame();
+            },
+            child: const Text(
+              "Reset",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           const SizedBox(

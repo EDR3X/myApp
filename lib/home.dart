@@ -15,7 +15,10 @@ class _homepageState extends State<homepage> {
       drawer: const myDrawer(),
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Home"),
+        title: const Text(
+          "Home",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),

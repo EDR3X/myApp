@@ -1,5 +1,6 @@
+// ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:myapp/home.dart';
 
 class login extends StatefulWidget {
@@ -20,6 +21,7 @@ class _loginState extends State<login> {
         username = value;
       }),
       decoration: InputDecoration(
+        prefixIcon: Icon(Icons.account_circle),
         contentPadding: EdgeInsets.all(10),
         hintText: "Username",
         border: OutlineInputBorder(
@@ -33,6 +35,7 @@ class _loginState extends State<login> {
       }),
       obscureText: true,
       decoration: InputDecoration(
+        prefixIcon: Icon(Icons.lock),
         contentPadding: EdgeInsets.all(10),
         hintText: "Password",
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
@@ -41,7 +44,8 @@ class _loginState extends State<login> {
 
     final loginButton = ElevatedButton(
       style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 15.0),
+        fixedSize: Size(380, 50),
+        // padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
@@ -74,7 +78,7 @@ class _loginState extends State<login> {
           );
         }
       },
-      child: Text(
+      child: const Text(
         "Login",
         style: TextStyle(color: Colors.black, fontSize: 25),
       ),
@@ -84,30 +88,39 @@ class _loginState extends State<login> {
       backgroundColor: Color.fromARGB(255, 76, 96, 89),
       body: ListView(
         children: [
+          const SizedBox(
+            height: 40,
+          ),
           Center(
-            child: Container(
-              color: Color.fromARGB(255, 255, 255, 255),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    Image.asset("assets/icon.png"),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    usernameField,
-                    SizedBox(
-                      height: 20,
-                    ),
-                    passwordField,
-                    SizedBox(
-                      height: 20,
-                    ),
-                    loginButton,
-                    SizedBox(
-                      height: 20,
-                    ),
-                  ],
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Color.fromARGB(255, 255, 255, 255),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      Image.asset("assets/icon.png", height: 250),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      usernameField,
+                      SizedBox(
+                        height: 20,
+                      ),
+                      passwordField,
+                      SizedBox(
+                        height: 40,
+                      ),
+                      loginButton,
+                      SizedBox(
+                        height: 20,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

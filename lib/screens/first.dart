@@ -16,7 +16,7 @@ class _firstPageState extends State<firstPage> {
       appBar: AppBar(
         title: Text("Firstpage"),
       ),
-      body: Text("currently empty"),
+      body: Center(child: Text("something new i guess")),
     );
   }
 }

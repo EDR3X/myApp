@@ -18,7 +18,7 @@ class _myDrawerState extends State<myDrawer> {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.45,
       child: Drawer(
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.cyan.shade700,
         child: Padding(
           padding: const EdgeInsets.all(4.0),
           child: ListView(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/home.dart';
+import 'package:myapp/screens/home.dart';
 
 // ignore: camel_case_types
 class wrapper extends StatelessWidget {

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/home.dart';
 import 'package:myapp/screens/first.dart';
 import 'package:myapp/screens/second.dart';
 import 'package:myapp/screens/third.dart';
 import 'package:myapp/screens/tictactoe.dart';
+
+import '../screens/home.dart';
 
 class myDrawer extends StatefulWidget {
   const myDrawer({Key? key}) : super(key: key);

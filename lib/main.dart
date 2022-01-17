@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/login.dart';
+
+import 'authentication/login.dart';
 
 void main(List<String> args) => runApp(
       MaterialApp(

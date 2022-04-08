@@ -12,11 +12,11 @@ class _firstPageState extends State<firstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: myDrawer(),
+      drawer: const myDrawer(),
       appBar: AppBar(
-        title: Text("Firstpage"),
+        title: const Text("Firstpage"),
       ),
-      body: Center(child: Text("something new i guess")),
+      body: const Center(child: Text("something new i guess")),
     );
   }
 }

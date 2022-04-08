@@ -16,6 +16,13 @@ class _loginState extends State<login> {
 
   @override
   Widget build(BuildContext context) {
+    bool _isHidden = true;
+    void _toggle() {
+      setState(() {
+        _isHidden = !_isHidden;
+      });
+    }
+
     final usernameField = TextField(
       onChanged: (value) => setState(() {
         username = value;
@@ -33,9 +40,15 @@ class _loginState extends State<login> {
       onChanged: (value) => setState(() {
         password = value;
       }),
-      obscureText: true,
+      obscureText: _isHidden,
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.lock),
+        prefixIcon: const Icon(Icons.lock),
+        suffixIcon: IconButton(
+          onPressed: _toggle,
+          icon: _isHidden
+              ? const Icon(Icons.visibility)
+              : const Icon(Icons.visibility_off),
+        ),
         contentPadding: EdgeInsets.all(10),
         hintText: "Password",
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),

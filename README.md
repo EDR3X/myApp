@@ -1,7 +1,7 @@
 # myapp
 
-Personal Project
+Passon project nothing serious
 
-## Getting Started
+## ...CLR
 
-Personal project on nothing but time pass
+Personal project to pass time
